@@ -1,0 +1,8 @@
+  model: skipped (--offline) ... speaking through the offline template
+
+~ I was nightly_orders_etl. I ran at 02:00 for 1,424 nights.
+   I read raw.orders and wrote mart.daily_revenue.
+   I died on 2025-03-14: upstream column 'cust_id' vanished.
+
+  lineage: raw.orders -> stg.orders -> mart.daily_revenue
+  epitaph written -> docs/sample/tombstone_offline.html

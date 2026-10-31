@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghostlog"
+version = "0.1.0"
+description = "A local seance for dead data pipelines: Gemma via Ollama plus sqlglot lineage."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "nightmoose" }]
+dependencies = ["sqlglot>=25"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff==0.17.3"]
+
+[project.scripts]
+ghostlog = "ghostlog.cli:main"
+
+[tool.setuptools]
+packages = ["ghostlog"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

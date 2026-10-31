@@ -1,0 +1,8 @@
+  model: gemma3:4b (local, offline) ... connected to the other side
+
+~ I was the nightly_orders_etl, running from 02:00, for 1424 nights.
+   I processed data from raw.orders and wrote to mart.daily_revenue.
+   My existence ceased on 2025-03-14 due to the loss of cust_id.
+
+  lineage: raw.orders -> stg.orders -> mart.daily_revenue
+  epitaph written -> docs/sample/tombstone.html

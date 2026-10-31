@@ -1,0 +1,8 @@
+  model: gemma3:4b (local, offline) ... connected to the other side
+
+~ I was the churn_scores job, designed to run nightly.
+   I processed data from crm.customers and raw.orders, writing to reports.churn_weekly.
+   My final operation concluded on an unknown date, due to an undefined failure.
+
+  lineage: crm.customers -> analytics.churn_scores -> reports.churn_weekly
+  epitaph written -> docs/sample/churn_tombstone.html
