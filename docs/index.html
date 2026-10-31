@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ghostlog - a local séance for dead data pipelines</title>
+<style>body{margin:0;background:#1a1020;color:#f3ead8;font-family:"DejaVu Sans Mono",ui-monospace,Menlo,monospace;max-width:760px;margin:auto;padding:2rem 1.2rem;line-height:1.6}
+h1{color:#f5a524;font-weight:normal}a{color:#f5a524}img{max-width:100%;border:2px solid #5c5c68;border-radius:8px}</style></head>
+<body>
+<h1>Ghostlog</h1>
+<p>A local séance for dead data pipelines. Ghostlog reads an old job log or SQL file, rebuilds its lineage with sqlglot, and lets Gemma (running locally through Ollama) give the job its voice.</p>
+<h2>Sample tombstones (real output)</h2>
+<ul>
+<li><a href="sample/tombstone.html">nightly_orders_etl</a>, voiced by gemma3:4b</li>
+<li><a href="sample/churn_tombstone.html">churn_scores</a>, a deprecated SQL file, voiced by gemma3:4b</li>
+<li><a href="sample/tombstone_offline.html">nightly_orders_etl --offline</a>, the template voice</li>
+</ul>
+<p><img src="screenshot-cli.png" alt="Ghostlog in the terminal"></p>
+<p>Code, tests, and install steps: <a href="https://github.com/nightmoose/ghostlog">github.com/nightmoose/ghostlog</a></p>
+</body></html>
